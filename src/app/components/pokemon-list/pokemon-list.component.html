@@ -1,0 +1,50 @@
+<div class="options">
+<h2>Pokedex</h2>
+<div class="contentButton">
+  <button (click)="goToFavorites()" class="button">Ver Favoritos</button>
+ </div>
+</div>
+
+<div class="table-content">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element">
+        <a class="name" (click)="navigateToDetails(element.name)">{{ element.name | pokemonNameTransform}}</a> <!-- Llama a la función de navegación -->
+        </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="url">
+      <th mat-header-cell *matHeaderCellDef> Url</th>
+      <td mat-cell *matCellDef="let element"> {{element.url}} </td>
+    </ng-container>
+    <ng-container matColumnDef="favorities">
+      <th mat-header-cell *matHeaderCellDef> Favorities</th>
+      <td mat-cell *matCellDef="let element"> {{element.favorities}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="favorite">
+      <th mat-header-cell *matHeaderCellDef> Favorite </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon (click)="toggleFavorite(element)" [color]="isFavorite(element) ? 'warn' : 'inherit'">
+          {{ isFavorite(element) ? 'favorite' : 'favorite_border' }}
+        </mat-icon>
+      </td>
+    </ng-container>
+    
+
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+
+
+
+  
+  
+ 

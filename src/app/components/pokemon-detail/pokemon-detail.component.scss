@@ -1,0 +1,125 @@
+/* Fondo general */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(120deg, #f8f9fa, #e9ecef); /* Suave gradiente gris */
+  color: #212529;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor principal */
+.container {
+  margin: 0;
+  background: #ffffff; /* Blanco puro */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  overflow: hidden; /* Previene desbordamiento */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Títulos */
+h2 {
+  color: #495057; /* Gris oscuro */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  color: #6c757d; /* Gris medio */
+  font-size: 1.5rem;
+  margin-top: 60px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #dee2e6; /* Línea decorativa gris claro */
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Texto en párrafos */
+p {
+  font-size: 1rem;
+  color: #343a40; /* Gris profundo */
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+
+.containerimg{
+  display: flex;
+  justify-content: center;
+}
+/* Recuadros de imágenes */
+img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 25px;
+  border: 3px solid #adb5bd; /* Gris claro */
+  border-radius: 50%; /* Circular */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #e9ecef; /* Gris claro */
+  color: #495057; /* Gris oscuro */
+  font-weight: bold;
+  text-transform: capitalize;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  background-color: #ced4da; /* Gris más oscuro */
+  color: #212529; /* Negro para contraste */
+}
+
+/* Scrollbar estilizado */
+div::-webkit-scrollbar {
+  width: 8px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #adb5bd; /* Gris claro para el thumb */
+  border-radius: 10px;
+}
+
+div::-webkit-scrollbar-track {
+  background: #e9ecef; /* Gris claro para el track */
+}
+
+/* Mensaje de carga */
+p.loading {
+  font-style: italic;
+  color: #868e96; /* Gris claro */
+  font-size: 1rem;
+}
